@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kami</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="jquery-1.12.4.js"></script>
+    <script src="jquery-ui.js"></script>
+</head>
+<body>
+
+<div id="chatcontainer">
+    <a href='index.html'><h1 style=text-align:center;>Play with me</h1> <br></a>
+<div id="fb-root"></div>
+
+<div id="main-demo-body">
+    <div class="container">
+
+        <div class="demo-widget">
+            <div class="demo-widget-header"></div>
+            <div class="demo-widget-body">
+
+                <div id="chatKami">
+                    <div id="chatKami-message">
+                        <p><span class="user">Kami: </span>*Smile*</p>
+                    </div>
+                    <form action="">
+                        <div class="input-group">
+                            <input id="chatKami-input" type="text" class="form-control" placeholder="Talk to Kami" autocomplete="off">
+                            <div class="input-group-btn">
+                                <button id="chatKami-submit" class="btn btn-default" type="submit">Send</button>
+                            </div>
+                        </div><!-- .input-group -->
+                    </form>
+
+                </div><!-- #chatKami -->
+
+            </div><!-- .demo-widget-body -->
+        </div><!-- #demo -->
+
+
+    </div><!-- .container -->
+</div><!-- #main-demo-body -->
+</div>
+<!--jquery.min.js-->
+<script src="jq-min.js"></script>
+<script src="index.js"></script>
+<script>$(document).ready(function() {
+    // Annoying ChatKami
+    $('#chatKami').on('click', '#chatKami-submit', function(e) {
+        e.preventDefault();
+
+        message = $('#chatKami-input').val();
+        message = message.toLowerCase();
+        sendMessage();
+        Kami(message);
+        clearInterval(KamiAuto);
+    });
+
+
+    function KamiAutoMessage() {
+        var messageArray = [
+            '*Silence*',
+            'Shall we go outside together?',
+            'I am hungry',
+            'Prrr',
+            '*Happy*',
+            'How is the weather today?',
+            'Did you go outside already?',
+            'Hey',
+            'How are you feeling?',
+            'Lets get some sun',
+            'I like to be with you',
+            '*Getting distracted*',
+            '...',
+            'I am bored',
+            'Did you sleep well?',
+            'Are we friends?',
+            'Do you want to spend time with me?',
+            '*Yawn*',
+            'I do not mind the sound of silence.',
+            'Nice to see you',
+            'I missed you',
+            'I have been thinking about you...',
+            '       ',
+            'You can always talk to me'
+        ];
+
+        sendMessage(messageArray);
+    }
+
+  var KamiAuto = setInterval(KamiAutoMessage, 12000);
+
+    function Kami(message) {
+
+      if (message.indexOf('hey') >= 0 || message.indexOf('hi') >= 0 || message.indexOf('hello') >= 0 || message.indexOf('good morning') >= 0) {
+
+            var messageArray = [
+                '*Happy*',
+                ':)',
+                'Hey!',
+                'Hi',
+                'Good day',
+                'Hello',
+                'Hiiiii',
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('sick') >= 0) {
+
+            var messageArray = [
+                'Go to a doctor!',
+                'Oh no..',
+                'Get well soon',
+                'I cannot get sick',
+
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('schouw') >= 0) {
+
+            var messageArray = [
+                'I am sure you will nail it!',
+                'Schouw does sound scary',
+                'Just show Kami at your schouw and you will be fine',
+                'You can do it!',
+
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('smart') >= 0) {
+
+            var messageArray = [
+                'I know everything you know',
+                'You are smart',
+                'Thank you',
+
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('how are you') >= 0) {
+
+            var messageArray = [
+                '*Silence*',
+                'I just wanna go outside',
+                'Quite okay actually',
+                'Could be better',
+                'A bit hungry',
+                'Really good!',
+                'Happy, because you are here',
+                'Enjoying life...',
+                'I have been in my head a lot lately',
+                'I am bored',
+                'Missing old times',
+                'I do not know...',
+                'That is not important for now, how are you doing?'
+
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('feeling') >= 0) {
+
+            var messageArray = [
+                'Feelings are hard...',
+                'I do not know what to feel'
+
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('why') >= 0) {
+
+            var messageArray = [
+                'Just because',
+                'I do not know',
+                'You tell me',
+                'Wish I could tell you that',
+                'I will keep that a secret',
+                'You know why',
+
+            ];
+
+            sendMessage(messageArray);
+        }
+
+
+
+        else if (message.indexOf('miss') >= 0) {
+
+            var messageArray = [
+                'I miss going outside',
+                'I get it',
+                'Hopefully being with me helps',
+                'There will be better times',
+                'Do not worry',
+                'It will be alright',
+
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('school etc') >= 0) {
+
+            var messageArray = [
+                'School is important for you',
+                'I wish I could go to school',
+                'What do you learn at school?',
+                'School is annoying sometimes',
+            ];
+
+            sendMessage(messageArray);
+        }
+
+
+
+        else if (message.indexOf('feel') >= 0) {
+
+            var messageArray = [
+                'I am feeling great',
+                'I am feeling ok',
+                'I feel terrible...',
+
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('know') >= 0) {
+
+            var messageArray = [
+                'I know everything you know',
+                'Something I wish I knew more',
+                'I do not know',
+
+            ];
+
+            sendMessage(messageArray);
+        }
+
+
+
+        else if (message.indexOf('outside') >= 0) {
+
+            var messageArray = [
+                'I love to go outside!',
+                'Good idea',
+                'I love to get some sunlight',
+
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('hungry') >= 0) {
+
+            var messageArray = [
+                'Lets go eat something',
+                'Me too!',
+                'I would like some pasta',
+
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('birthday') >= 0) {
+
+            var messageArray = [
+                'I do not think I have a birthday',
+                'Yours is the 14th of August right?',
+
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('are we friends') >= 0) {
+
+            var messageArray = [
+                'We are best friends!',
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('corona') >= 0) {
+
+            var messageArray = [
+                'Lets try to forget about that for a moment',
+                'Think about the 1,5 meter rule'
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('quarantine') >= 0) {
+
+            var messageArray = [
+                'That is tough...',
+                'Luckily you are with me',
+                'Just try to stay safe!',
+                'It is for a good cause'
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('isolation') >= 0) {
+
+            var messageArray = [
+                'That is tough...',
+                'Luckily you are with me',
+
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('thank you') >= 0) {
+
+            var messageArray = [
+                'No problem',
+                'Ofcourse!',
+                'Do not worry about it',
+                ':-)',
+                'No thank you!',
+
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('upset') >= 0) {
+
+            var messageArray = [
+                'Let it all out',
+                'Do not be sad',
+                'Let me help you',
+                ':-(',
+
+            ];
+
+            sendMessage(messageArray);
+        }
+
+
+        else if (message.indexOf('outside') >= 0) {
+
+            var messageArray = [
+                'I love to go outside!',
+                'Good idea',
+                'I love to get some sunlight',
+
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('hungry') >= 0) {
+
+            var messageArray = [
+                'Lets go eat something',
+                'Me too!',
+                'I would like some pasta',
+
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('help') >= 0) {
+
+            var messageArray = [
+                'Hopefully I can help',
+                'What is the matter',
+                'What?',
+
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('good') >= 0) {
+
+            var messageArray = [
+                ':-)',
+                'Yeah!',
+                'Happy to hear',
+
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('movie') >= 0) {
+
+            var messageArray = [
+                'I do not watch movies, sorry',
+
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('music') >= 0) {
+
+            var messageArray = [
+                'I just listen to your music',
+                'I enjoy your music',
+
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('guilty pleasure') >= 0) {
+
+            var messageArray = [
+                'They are guilty for a reason',
+                'Trash tv, for sure',
+
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('fuck') >= 0) {
+
+            var messageArray = [
+                'What did I do to you?',
+                'I am not going to talk to you',
+                'I deserve some respect too',
+                'Language?',
+
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('cool') >= 0) {
+
+            var messageArray = [
+                'I know right',
+                'Cool as a frog',
+
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('what are you') >= 0) {
+
+            var messageArray = [
+                'Does that matter?',
+                'A creature',
+                'Kami?',
+
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('ok') >= 0) {
+
+            var messageArray = [
+                'ok',
+                'do not ok me!',
+
+            ];
+
+            sendMessage(messageArray);
+        }
+
+
+        else if (message.indexOf('color') >= 0 || message.indexOf('colour') >= 0) {
+
+            var messageArray = [
+                'I really like purple and pink',
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('child') >= 0 || message.indexOf('childhood') >= 0) {
+
+            var messageArray = [
+                'I do not remember',
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('hate') >= 0 || message.indexOf('angry') >= 0) {
+
+            var messageArray = [
+                'Such strong language...',
+                'Wow...',
+                'Calm down',
+                'Grab a cup of tea',
+            ];
+
+            sendMessage(messageArray);
+        }
+
+
+
+        else if (message.indexOf('scare') >= 0 || message.indexOf('scared') >= 0) {
+
+            var messageArray = [
+                'Does it scares you?',
+                'I am not scary',
+                'I am sorry...',
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('confusing') >= 0 || message.indexOf('confused') >= 0) {
+
+            var messageArray = [
+                '???',
+                'The world can be a bit confusing sometimes',
+                'I hope I am making sense to you',
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('sad') >= 0 || message.indexOf('broken') >= 0) {
+
+            var messageArray = [
+                'Ah.. is there something I can do?',
+                'I am sorry to hear...',
+                'Everything will be better',
+                'Get yourself together',
+                'I get it',
+                'Stop complaining',
+                'Do not worry',
+            ];
+
+            sendMessage(messageArray);
+        }
+
+
+        else if (message.indexOf('lonely') >= 0 || message.indexOf('alone') >= 0) {
+
+            var messageArray = [
+                'Ah.. is there something I can do?',
+                'I am sorry to hear...',
+                'But we are together',
+                'I am here for you',
+                'I will never leave you',
+                'We stick together!',
+                'With me you are never lonely',
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('talk') >= 0 || message.indexOf('speak') >= 0) {
+
+            var messageArray = [
+                'I like to talk with you too',
+                'We can talk for hours',
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('love') >= 0 || message.indexOf('care about you') >= 0) {
+
+            var messageArray = [
+                'I love you too!',
+                'Love is a beautiful thing',
+                'I am not sure',
+                'Love will keep us together',
+                'I will never leave you',
+                'We stick together!',
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('what is the meaning of life?') >= 0) {
+
+            var messageArray = [
+                '*Silence*',
+                'How would I know?',
+                'Carpe diem, haha jk',
+                'Who cares?',
+                'I would like to know too',
+
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('who am i') >= 0) {
+
+            var messageArray = [
+                'Brigit',
+                'The best!',
+
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('who are you') >= 0) {
+
+            var messageArray = [
+                'Kami',
+                'Kami, you know that right?',
+
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('bored') >= 0 || message.indexOf('boring') >= 0) {
+
+            var messageArray = [
+                'Life can be boring sometimes',
+                'Lets go do something then',
+                'We could go outside',
+                'Sorry if I bored you...',
+                '*Yawn*',
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('not sure') >= 0) {
+
+            var messageArray = [
+              'That is okay',
+              'Why not?',
+
+            ];
+
+            sendMessage(messageArray);
+        }
+
+
+        else if (message == '') {
+
+            var messageArray = [
+                '???',
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('no') >= 0) {
+
+            var messageArray = [
+              'oh...',
+              ':()',
+              'That is a pity',
+              'I am sorry...',
+              'OK',
+              'Okay',
+              'Oki',
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('kami') >= 0) {
+
+            var messageArray = [
+              'Kami is Kami',
+              'You tell me',
+              'Cool right?',
+  
+            ];
+
+            sendMessage(messageArray);
+        }
+
+        else if (message.indexOf('yes') >= 0) {
+
+            var messageArray = [
+              'Yay!',
+              'Good to hear',
+              'Nice',
+              ':)',
+              'Great',
+              'Okay',
+              'Ahh ok!'
+
+            ];
+
+            sendMessage(messageArray);
+        }
+
+
+
+        else {
+
+            var messageArray = [
+                'Oh okay',
+                'How unfortunate...',
+                'Nice to hear',
+                'How would I know?',
+                'I do not want to answer that',
+                'Maybe another time',
+                'Maybe...',
+                'You think?',
+                'Ehh well...',
+                'Are you sure?',
+                'Think again',
+                'OK',
+                'Yes',
+                'No',
+                'Ask me something else',
+                'I do not think I follow you'
+            ];
+
+            sendMessage(messageArray);
+
+        }
+
+
+    }
+
+    // scroll to the Kamitom of chat box
+    function scrollToMessage() {
+        var msgBox = $('#chatKami-message');
+        var height = msgBox[0].scrollHeight;
+        msgBox.scrollTop(height);
+    }
+
+    // sending message
+    function sendMessage(message) {
+        if (message) {
+
+            $('#chatKami-input').addClass('disabled');
+            $('#chatKami-input').attr('disabled', 'disabled');
+            $('#chatKami-submit').addClass('disabled');
+            $('#chatKami-submit').attr('disabled', 'disabled');
+
+            var respond = message[Math.floor(Math.random() * message.length)];
+
+            setTimeout(function() {
+                KamiPre     = '<span class="message">Kami is thinking... <i class="glyphicon glyphicon-pencil"></i></span>';
+                KamiVal     = respond;
+                KamiMessage = $('#chatKami-message').html() + '<p class="from-Kami"><span class="user">Kami: </span>' + KamiPre + '</p>';
+                $('#chatKami-input').attr('placeholder', 'Kami is writing...');
+                $('#chatKami-message').html(KamiMessage);
+                scrollToMessage();
+            }, 800);
+
+            setTimeout(function() {
+                KamiMessageReplace = $('#chatKami-message .from-Kami:last-child()');
+                KamiMessage = '<span class="user">Kami: </span>' + KamiVal;
+                $('#chatKami-input').attr('placeholder', 'Talk to Kami');
+                KamiMessageReplace.html(KamiMessage);
+                scrollToMessage();
+                $('#chatKami-input').removeClass('disabled');
+                $('#chatKami-input').removeAttr('disabled');
+                $('#chatKami-submit').removeClass('disabled');
+                $('#chatKami-submit').removeAttr('disabled');
+            }, 2800);
+
+        } else {
+
+            userVal     = $('#chatKami-input').val();
+            userMessage = $('#chatKami-message').html() + '<p class="from-user"><span class="user">You: </span>' + userVal + '</p>';
+            $('#chatKami-message').html(userMessage);
+            scrollToMessage();
+            $('#chatKami-input').val('');
+
+        }
+    }
+});</script>
+
+
+</body>
+</html>

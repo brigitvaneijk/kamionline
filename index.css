@@ -1,0 +1,283 @@
+/* FONT */
+@font-face {
+    font-family: 'parabole_trialregular';
+    src: url('paraboletrial-regular.woff2') format('woff2'),
+         url('paraboletrial-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+
+
+/* BASE */
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,html {
+    height: 100%;
+    font-family: "parabole_trialregular";
+    background-color: #c93fea;
+
+}
+
+article, aside, details, figcaption, figure,
+footer, header, main, menu, nav, section, summary {
+  /* Add correct display for IE 9- and some newer browsers */
+  display: block;
+}
+
+::-moz-selection {
+  background: none;
+  color: none;
+}
+
+::selection {
+  background: none;
+  color: none;
+}
+
+
+
+/* DESKTOP */
+@media screen and (min-width: 600px) {
+
+  #maincontainer{
+    font-size: 1em;;
+    width:100%;
+    height:100%;
+    vertical-align: top;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1%;
+    text-align: center;
+  }
+
+  #chatcontainer{
+    font-size: 1em;;
+    width:100%;
+    height:100%;
+    vertical-align: top;
+    background-color: #c93fea;
+    padding: 1%;
+    text-align: left;
+  }
+
+
+
+  h1 {
+    font-family: "parabole_trialregular";
+    font-size: 3em;
+    color:black;
+  }
+
+  a{
+    color:black;
+  }
+  #main-demo-body{
+    background-color: transparent;
+  }
+
+  #chatKami #chatKami-message {
+    padding: 0;
+    border: 6px black dotted;
+    height: 600px;
+    border-radius: 4px;
+    margin: 0 0 12px 0;
+    font-size: 40px;
+    overflow: hidden;
+    overflow-y: auto;
+    font-family: 'parabole_trialregular';
+  }
+
+  #chatKami #chatKami-input {
+    padding: 0;
+    font-size: 40px;
+    overflow: hidden;
+    overflow-y: auto;
+    font-size: 2.5em;
+    font-family: 'parabole_trialregular';
+  }
+
+  #chatKami #chatKami-submit {
+    font-size: 40px;
+    overflow: hidden;
+    overflow-y: auto;
+    font-size: 2.5em;
+    font-family: 'parabole_trialregular';
+    align-content: center;
+  }
+
+  #chatKami #chatKami-message p {
+    font-family: 'parabole_trialregular';
+    padding: 6px 12px;
+    color: black;
+    margin: 0
+  }
+
+  #chatKami #chatKami-message p.from-Kami {
+    font-family: 'parabole_trialregular';
+    color: black
+  }
+
+  #chatKami #chatKami-message p.from-Kami .user {
+    font-family: 'parabole_trialregular';
+    color: black
+  }
+
+  #chatKami #chatKami-message p:nth-child(even) {
+    background-color: #e67cff;
+  }
+
+  #chatKami #chatKami-message .user {
+    font-family: 'parabole_trialregular';
+  }
+
+  #chatKami #chatKami-message .message {
+    font-family: 'parabole_trialregular';
+    color: #e67cff;
+  }
+
+  #chatKami #chatKami-message .message .glyphicon {
+    font-family: 'parabole_trialregular';
+    font-size: 40px
+  }
+
+  #chatKami .input-group-btn .btn {
+    align: center;
+    margin-top: 10px;
+    font-family: 'parabole_trialregular';
+    border-left: 0;
+    font-size: 40px
+  }
+
+  select:focus, textarea {
+    font-family: 'parabole_trialregular';
+    font-size: 50px;
+  }
+
+  input[type="text"] {
+    align-content: center;
+    font-family: 'parabole_trialregular';
+    font-size: inherit;
+  }
+
+
+}
+
+
+/* MOBILE */
+@media screen and (max-width: 601px) {
+  #maincontainer{
+    font-size: 1em;;
+    width:100%;
+    height:100%;
+    vertical-align: top;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+  }
+
+  #chatcontainer{
+    font-size: 1em;;
+    width:100%;
+    height:100%;
+    vertical-align: top;
+    background-color: #e864a9;
+  }
+
+  h1 {
+    font-family: "parabole_trialregular";
+    font-size: 5em;
+    color:black;
+
+  }
+
+  a{
+    color:black;
+  }
+  #main-demo-body{
+    background-color: transparent;
+  }
+
+  #chatKami #chatKami-message {
+    padding: 0;
+    border: 4px black dotted;
+    height: 600px;
+    border-radius: 4px;
+    margin: 0 0 12px 0;
+    font-size: 40px;
+    overflow: hidden;
+    overflow-y: auto;
+    font-family: 'parabole_trialregular';
+  }
+
+  #chatKami #chatKami-message p {
+    font-family: 'parabole_trialregular';
+    padding: 6px 12px;
+    color: black;
+    margin: 0
+  }
+
+  #chatKami #chatKami-message p.from-Kami {
+    font-family: 'parabole_trialregular';
+    color: black
+  }
+
+  #chatKami #chatKami-message p.from-Kami .user {
+    font-family: 'parabole_trialregular';
+    color: black
+  }
+
+  #chatKami #chatKami-message p:nth-child(even) {
+    background-color: #e864a9
+  }
+
+  #chatKami #chatKami-message .user {
+    font-family: 'parabole_trialregular';
+  }
+
+  #chatKami #chatKami-message .message {
+    font-family: 'parabole_trialregular';
+    color: yellow
+  }
+
+  #chatKami #chatKami-message .message .glyphicon {
+    font-family: 'parabole_trialregular';
+    font-size: 40px
+  }
+
+  #chatKami .input-group-btn .btn {
+    align: center;
+    margin-top: 10px;
+    font-family: 'parabole_trialregular';
+    border-left: 0;
+    font-size: 40px
+  }
+
+  select:focus, textarea {
+    font-family: 'parabole_trialregular';
+    font-size: 50px;
+  }
+
+  input[type="text"] {
+    align-content: center;
+    font-family: 'parabole_trialregular';
+    font-size: inherit;
+  }
+
+}
+
+
+
+
+
+
+/* Subcolumn inside one Column */
